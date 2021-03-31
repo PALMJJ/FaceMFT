@@ -1,0 +1,7 @@
+{
+    "root":"/home/hengyuli/FaceMFT/dataset",
+    "train":
+    {
+        "Apink":"/home/hengyuli/FaceMFT/dataset/cuhksysu/cuhksysu.train"
+    }
+}

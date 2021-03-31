@@ -1,0 +1,7 @@
+{
+    "root":"/home/hengyuli/FaceMFT/dataset",
+    "test":
+    {
+        "Apink":"/home/hengyuli/FaceMFT/dataset/MOT16/Apink.train"
+    }
+}

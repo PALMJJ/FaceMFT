@@ -1,0 +1,7 @@
+{
+    "root":"/home/hengyuli/FaceMFT/dataset",
+    "train":
+    {
+        "widerface":"/home/hengyuli/FaceMFT/dataset/widerface/widerface.train"
+    }
+}

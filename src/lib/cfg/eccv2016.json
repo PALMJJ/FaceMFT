@@ -1,0 +1,7 @@
+{
+    "root":"/home/hengyuli/FaceMFT/dataset",
+    "train":
+    {
+        "eccv2016":"/home/hengyuli/FaceMFT/dataset/eccv2016/eccv2016.train"
+    }
+}
