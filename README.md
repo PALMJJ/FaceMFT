@@ -1,6 +1,9 @@
 # multiple face tracking 多人脸跟踪模型FaceMFT
 
 * 博客：https://blog.csdn.net/qq_25808521/article/details/114970053?spm=1001.2014.3001.5501
+* MobileNet模型地址：链接：https://pan.baidu.com/s/1xNS5m_0tNMhUSftu5M69kA 提取码：r2w5
+* 训练模型地址：链接：https://pan.baidu.com/s/1t93KllfScpWVL5OMUCFt-g 提取码：2z6w
+* 数据集地址：
 
 # FairMOT
 
