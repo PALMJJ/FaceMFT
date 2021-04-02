@@ -5,52 +5,6 @@
 * 训练模型地址：链接：https://pan.baidu.com/s/1t93KllfScpWVL5OMUCFt-g 提取码：2z6w
 * 数据集地址：链接：https://pan.baidu.com/s/1KMt7u-Su84VQ2N7pw2Sw1g 提取码：ex4i
 
-# FairMOT
-
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/a-simple-baseline-for-multi-object-tracking/multi-object-tracking-on-2dmot15-1)](https://paperswithcode.com/sota/multi-object-tracking-on-2dmot15-1?p=a-simple-baseline-for-multi-object-tracking)
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/a-simple-baseline-for-multi-object-tracking/multi-object-tracking-on-mot16)](https://paperswithcode.com/sota/multi-object-tracking-on-mot16?p=a-simple-baseline-for-multi-object-tracking)
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/a-simple-baseline-for-multi-object-tracking/multi-object-tracking-on-mot17)](https://paperswithcode.com/sota/multi-object-tracking-on-mot17?p=a-simple-baseline-for-multi-object-tracking)
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/a-simple-baseline-for-multi-object-tracking/multi-object-tracking-on-mot20-1)](https://paperswithcode.com/sota/multi-object-tracking-on-mot20-1?p=a-simple-baseline-for-multi-object-tracking)
-
-A simple baseline for one-shot multi-object tracking:
-![](assets/pipeline.png)
-
-> [**FairMOT: On the Fairness of Detection and Re-Identification in Multiple Object Tracking**](http://arxiv.org/abs/2004.01888),            
-> Yifu Zhang, Chunyu Wang, Xinggang Wang, Wenjun Zeng, Wenyu Liu,        
-> *arXiv technical report ([arXiv 2004.01888](http://arxiv.org/abs/2004.01888))*
-
-## Abstract
-
-There has been remarkable progress on object detection and re-identification in recent years which are the core components for multi-object tracking. However, little attention has been focused on accomplishing the two tasks in a single network to improve the inference speed. The initial attempts along this path ended up with degraded results mainly because the re-identification branch is not appropriately learned. In this work, we study the essential reasons behind the failure, and accordingly present a simple baseline to addresses the problems. It remarkably outperforms the state-of-the-arts on the MOT challenge datasets at 30 FPS. We hope this baseline could inspire and help evaluate new ideas in this field.
-
-## News
-
-* (2020.09.10) A new version of FairMOT is released! (73.7 MOTA on MOT17)
-
-## Main updates
-
-* We pretrain FairMOT on the CrowdHuman dataset using a self-supervised learning approach.
-* To detect bounding boxes outside the image, we use left, top, right and bottom (4 channel) to replace the WH head (2 channel). 
-
-## Tracking performance
-
-### Results on MOT challenge test set
-
-| Dataset | MOTA | IDF1 | IDS  | MT    | ML    | FPS  |
-| ------- | ---- | ---- | ---- | ----- | ----- | ---- |
-| 2DMOT15 | 60.6 | 64.7 | 591  | 47.6% | 11.0% | 30.5 |
-| MOT16   | 74.9 | 72.8 | 1074 | 44.7% | 15.9% | 25.9 |
-| MOT17   | 73.7 | 72.3 | 3303 | 43.2% | 17.3% | 25.9 |
-| MOT20   | 61.8 | 67.3 | 5243 | 68.8% | 7.6%  | 13.2 |
-
- All of the results are obtained on the [MOT challenge](https://motchallenge.net) evaluation server under the “private detector” protocol. We rank first among all the trackers on 2DMOT15, MOT16, MOT17 and  MOT20. The tracking speed of the entire system can reach up to **30 FPS**.
-
-### Video demos on MOT challenge test set
-
-<img src="assets/MOT15.gif" width="400"/>   <img src="assets/MOT16.gif" width="400"/>
-<img src="assets/MOT17.gif" width="400"/>   <img src="assets/MOT20.gif" width="400"/>
-
-
 ## Installation
 
 * Clone this repo, and we'll call the directory that you cloned as ${FAIRMOT_ROOT}
@@ -260,19 +214,3 @@ python demo.py mot --load_model ../models/fairmot_dla34.pth --conf_thres 0.4
 
 You can change --input-video and --output-root to get the demos of your own videos.
 --conf_thres can be set from 0.3 to 0.7 depending on your own videos.
-
-## Acknowledgement
-
-A large part of the code is borrowed from [Zhongdao/Towards-Realtime-MOT](https://github.com/Zhongdao/Towards-Realtime-MOT) and [xingyizhou/CenterNet](https://github.com/xingyizhou/CenterNet). Thanks for their wonderful works.
-
-## Citation
-
-```
-@article{zhang2020fair,
-  title={FairMOT: On the Fairness of Detection and Re-Identification in Multiple Object Tracking},
-  author={Zhang, Yifu and Wang, Chunyu and Wang, Xinggang and Zeng, Wenjun and Liu, Wenyu},
-  journal={arXiv preprint arXiv:2004.01888},
-  year={2020}
-}
-```
-
